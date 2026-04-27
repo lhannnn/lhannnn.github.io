@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Han Luo favicon">
+  <defs>
+    <linearGradient id="front" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b4b6b6"/>
+      <stop offset="100%" stop-color="#858787"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4d5d5"/>
+      <stop offset="100%" stop-color="#aaa"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8c8e8e"/>
+      <stop offset="100%" stop-color="#656767"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#2a2a2a" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#soft-shadow)" stroke="#747676" stroke-width="2" stroke-linejoin="round">
+    <g id="left-column">
+      <polygon fill="url(#top)" points="330 250 420 205 505 238 415 284"/>
+      <polygon fill="url(#side)" points="415 284 505 238 505 665 415 708"/>
+      <polygon fill="url(#front)" points="330 250 415 284 415 708 330 670"/>
+      <g opacity="0.48">
+        <path d="M351 259v420M372 267v421M394 276v421"/>
+        <path d="M330 323l85 35M330 387l85 35M330 451l85 35M330 515l85 35M330 579l85 35M330 643l85 35"/>
+      </g>
+    </g>
+
+    <g id="right-column">
+      <polygon fill="url(#top)" points="570 302 660 257 745 290 655 336"/>
+      <polygon fill="url(#side)" points="655 336 745 290 745 717 655 760"/>
+      <polygon fill="url(#front)" points="570 302 655 336 655 760 570 722"/>
+      <g opacity="0.48">
+        <path d="M591 311v420M612 319v421M634 328v421"/>
+        <path d="M570 375l85 35M570 439l85 35M570 503l85 35M570 567l85 35M570 631l85 35M570 695l85 35"/>
+      </g>
+    </g>
+
+    <g id="crossbar">
+      <polygon fill="url(#top)" points="415 420 570 498 655 458 502 379"/>
+      <polygon fill="url(#side)" points="570 498 655 458 655 560 570 602"/>
+      <polygon fill="url(#front)" points="415 420 570 498 570 602 415 526"/>
+      <g opacity="0.48">
+        <path d="M446 435v106M477 451v106M508 467v105M539 482v106"/>
+        <path d="M415 456l155 78M415 492l155 77"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,364 @@
+<header class="page-content site-header-shell">
+  <nav class="site-header-nav" aria-label="Primary">
+    <button class="site-header-toggle" type="button" data-nav-toggle data-nav-target="#siteHeaderMenu" aria-controls="siteHeaderMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="site-header-toggle-icon invert-on-dark"></span>
+    </button>
+
+    <div class="site-header-menu" id="siteHeaderMenu">
+      <ul class="site-header-links">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/' %} active {% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains 'publication' %} active {% endif %}" href="{{ '/publication' | relative_url }}">Publication</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains 'project' %} active {% endif %}" href="{{ '/project' | relative_url }}">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains 'cv' %} active {% endif %}" href="{{ '/cv' | relative_url }}">CV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle {% if page.url contains 'basketball' or page.url contains 'piano' or page.url contains 'travel' or page.url contains 'blog' %} active {% endif %}" type="button" data-dropdown-toggle aria-expanded="false">
+            others
+          </button>
+          <ul class="dropdown-menu" aria-label="Others">
+            <li><a class="dropdown-link" href="{{ '/basketball' | relative_url }}">basketball</a></li>
+            <li><a class="dropdown-link" href="{{ '/piano' | relative_url }}">piano</a></li>
+            <li><a class="dropdown-link" href="{{ '/travel' | relative_url }}">travel</a></li>
+            <li><a class="dropdown-link" href="{{ '/blog' | relative_url }}">blog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header-shell {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header-nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 2rem;
+    padding-right: 0.35rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header-menu {
+    display: block;
+    width: 100%;
+  }
+
+  .site-header-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-header-toggle {
+    display: none;
+    margin-left: auto;
+    padding: 0.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .site-header-toggle-icon {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.5rem;
+    background-image:
+      linear-gradient(currentColor, currentColor),
+      linear-gradient(currentColor, currentColor),
+      linear-gradient(currentColor, currentColor);
+    background-position: center 0.2rem, center, center calc(100% - 0.2rem);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+  }
+
+  .site-header-links .nav-link {
+    position: relative;
+    text-decoration: none !important;
+  }
+
+  .site-header-links button.nav-link {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .site-header-links .nav-link:hover {
+    font-weight: 500;
+  }
+
+  .site-header-links .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.08rem;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.22s ease;
+  }
+
+  .site-header-links .nav-link:hover::before,
+  .site-header-links .nav-link.active::before {
+    transform: scaleX(1);
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 29;
+    width: max(100%, 8.25rem);
+    height: 0.65rem;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    right: 0;
+    z-index: 30;
+    min-width: 8.25rem;
+    margin: 0;
+    padding: 0.45rem 0;
+    list-style: none;
+    background-color: rgb(var(--surface) / 0.98);
+    border: 1px solid rgb(var(--ink) / 0.12);
+    box-shadow: 0 10px 28px rgb(var(--shadow) / 0.14);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.2rem);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown.is-open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+
+  .dropdown-link {
+    display: block;
+    padding: 0.35rem 0.85rem;
+    color: rgb(72 57 33) !important;
+    font-size: 0.88rem;
+    font-weight: 300 !important;
+    line-height: 1.35;
+    text-decoration: none !important;
+    white-space: nowrap;
+  }
+
+  .dropdown-link:hover {
+    background-color: rgb(var(--surface-alt) / 0.95);
+    font-weight: 450 !important;
+  }
+
+  @media (min-width: 768px) {
+    .site-header-nav {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      padding-top: 1.8rem;
+      padding-bottom: 1.8rem;
+    }
+
+    .site-header-links {
+      gap: 1rem;
+    }
+
+    .site-header-links .nav-link {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .site-header-shell {
+      padding-top: 2.75rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .site-header-nav {
+      display: block;
+      padding-right: 0;
+      padding-top: 0.15rem;
+      padding-bottom: 0.15rem;
+    }
+
+    .site-header-toggle {
+      display: block;
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: 0.9rem;
+    }
+
+    .site-header-menu {
+      width: 100%;
+      display: block;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      transition: max-height 0.28s ease, opacity 0.2s ease, padding-top 0.28s ease;
+    }
+
+    .site-header-menu.show {
+      max-height: 24rem;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .site-header-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding-top: 1rem;
+      padding-right: 0;
+      width: 100%;
+    }
+
+    .site-header-links > li {
+      width: 100%;
+    }
+
+    .site-header-links .nav-link {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .dropdown::after {
+      display: none;
+    }
+
+    .dropdown-menu {
+      position: static;
+      min-width: 0;
+      margin-top: 0.35rem;
+      padding: 0.15rem 0 0.15rem 1rem;
+      border: 0;
+      box-shadow: none;
+      background: transparent;
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+      transform: none;
+      transition: max-height 0.22s ease, opacity 0.18s ease;
+    }
+
+    .dropdown.is-open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      max-height: 12rem;
+      pointer-events: auto;
+    }
+
+    .dropdown-link {
+      padding: 0.3rem 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .site-header-menu {
+      display: block !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var navToggle = document.querySelector('[data-nav-toggle]');
+    var navTarget = navToggle ? document.querySelector(navToggle.getAttribute('data-nav-target')) : null;
+    var mobileBreakpoint = 768;
+
+    if (!navToggle || !navTarget) {
+      return;
+    }
+
+    navToggle.addEventListener('click', function () {
+      var isOpen = navTarget.classList.toggle('show');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navTarget.querySelectorAll('[data-dropdown-toggle]').forEach(function (toggle) {
+      toggle.addEventListener('click', function (event) {
+        if (window.innerWidth >= mobileBreakpoint) {
+          return;
+        }
+
+        event.preventDefault();
+        var dropdown = toggle.closest('.dropdown');
+        if (!dropdown) {
+          return;
+        }
+
+        var isOpen = dropdown.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+
+    navTarget.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < mobileBreakpoint) {
+          navTarget.classList.remove('show');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navTarget.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            dropdown.classList.remove('is-open');
+            var toggle = dropdown.querySelector('[data-dropdown-toggle]');
+            if (toggle) {
+              toggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (event.target.closest('.dropdown')) {
+        return;
+      }
+
+      navTarget.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+        dropdown.classList.remove('is-open');
+        var toggle = dropdown.querySelector('[data-dropdown-toggle]');
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+</script>

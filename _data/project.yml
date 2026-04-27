@@ -1,0 +1,39 @@
+project:
+  - title: "SPASM"
+    description: "Stable persona-driven agent simulation for controllable multi-turn dialogue generation."
+    tags:
+      - Findings of ACL 2026
+      - LLM Agents
+      - Multi-turn Dialogue
+      - Simulation
+    image: spasm-framework.png
+    paper: SPASM.pdf
+    publication: /publication/spasm
+    code: "https://github.com/lhannnn/SPASM"
+    detail: |
+      <p>SPASM is a stability-first framework for persona-driven LLM-LLM dialogue simulation. The project addresses long-horizon identity failures such as persona drift, role confusion, and echoing when language models are used to generate synthetic multi-turn dialogue data.</p>
+      <p>The framework decomposes simulation into persona generation, Client-Responder dialogue generation, and termination detection. Its core mechanism, Egocentric Context Projection, stores dialogue history in a perspective-agnostic form and projects it into each agent's view before generation.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/spasm-framework.png" alt="SPASM framework overview">
+      <p class="project-modal-caption">SPASM framework overview: persona generation, dialogue simulation, egocentric context projection, and termination detection.</p>
+      <hr>
+      <p><b>[My role in this project]</b><br>First author; framework design, implementation, experiments, analysis, and writing.</p>
+  - title: "DialogGuard"
+    description: "A multi-agent psychosocial safety evaluation interface for sensitive LLM responses."
+    tags:
+      - ACL 2026 Demo
+      - Responsible AI
+      - Multi-agent Evaluation
+      - Interface
+    image: dialogguard-interface.png
+    paper: DialogGuard.pdf
+    publication: /publication/dialogguard
+    demo: "https://anonymous.4open.science/r/dialogguard-web-CE7E"
+    detail: |
+      <p>DialogGuard is a web interface for auditing LLM responses in sensitive conversational contexts. It wraps arbitrary generative models with reusable LLM-as-a-judge pipelines and presents practitioner-facing risk scores and natural-language rationales.</p>
+      <p>The system supports manual input and live chat workflows, evaluates responses across psychosocial safety dimensions, and exposes multiple evaluation mechanisms including single-agent scoring, dual-agent correction, majority voting, and multi-agent debate.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/dialogguard-interface.png" alt="DialogGuard interface">
+      <p class="project-modal-caption">DialogGuard interface for entering dialogue context, comparing evaluation mechanisms, and inspecting per-dimension risk scores.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/dialogguard-reasoning.png" alt="DialogGuard reasoning panel">
+      <p class="project-modal-caption">Reasoning panel exposing step-by-step multi-agent safety judgments.</p>
+      <hr>
+      <p><b>[My role in this project]</b><br>First author; system design, interface implementation, evaluation, study analysis, and writing.</p>

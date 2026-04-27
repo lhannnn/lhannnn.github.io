@@ -1,0 +1,45 @@
+title: Han Luo
+author:
+  name: Han Luo
+  email: sxcn5111@leeds.ac.uk
+  url: https://lhannnn.github.io
+description: >
+  Academic personal website for Han Luo, an undergraduate student working on large language model agents, multi-agent systems, and responsible AI.
+
+lang: en
+show_excerpts: false
+permalink: /:title
+
+url: "https://lhannnn.github.io"
+baseurl: ""
+
+links:
+  google_scholar: "https://scholar.google.com/citations?user=F1jGOoMAAAAJ&hl=en"
+  github: "https://github.com/lhannnn"
+  linkedin: "https://www.linkedin.com/in/han-luo-5592a9342/"
+  instagram: ""
+  x: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  publication:
+    output: true
+    permalink: /publication/:slug
+
+defaults:
+  - scope:
+      path: ""
+      type: "publication"
+    values:
+      layout: publication
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle

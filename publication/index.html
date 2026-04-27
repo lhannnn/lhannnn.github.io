@@ -1,0 +1,107 @@
+---
+layout: default
+title: Publication
+permalink: /publication
+description: Publication list of Han Luo
+---
+
+{% assign publications = site.publication | sort: 'year' | group_by: 'year' | reverse %}
+{% assign category = site.data.publication-category %}
+
+<style>
+  [type=radio] {
+    display: none !important;
+  }
+
+  {% for type in category.types %}
+  #publication-tag-{{ type | replace: ' / ', '' | replace: ' ', '-' }}:checked ~ .publication-filter-row .publication-tag-label#publication-label-{{ type | replace: ' / ', '' | replace: ' ', '-' }},
+  {% endfor %}
+  #publication-tag-all:checked ~ .publication-filter-row .publication-tag-label#publication-label-all {
+    background-color: rgb(var(--white) / 0.96);
+    border-color: rgb(var(--ink) / 0.18);
+    color: rgb(var(--ink));
+  }
+
+  {% for type in category.types %}
+  #publication-tag-{{ type | replace: ' / ', '' | replace: ' ', '-' }}:checked ~ #publications > .publication-item:not(.publication-tag-{{ type | replace: ' / ', '' | replace: ' ', '-' }}) {
+    display: none !important;
+  }
+  {% endfor %}
+</style>
+
+<div class="px-3 py-4">
+  <div class="pb-3">
+    <p class="page-title">Publication</p>
+  </div>
+  <div class="flex gap-16 mt-4 pb-12 flex-col md:flex-row">
+    <aside class="w-32 shrink-0 relative hidden md:block">
+      <div class="publication-year-nav sticky top-12 mt-[3.8rem] border-l border-ink-400/30 pl-5 flex flex-col gap-4">
+        {% for year in publications %}
+        <a href="#{{ year.name }}" class="publication-year-link{% if forloop.first %} is-active{% endif %} text-sm transition-colors" data-year-link="{{ year.name }}">{{ year.name }}</a>
+        {% endfor %}
+      </div>
+    </aside>
+    <div class="publication-list flex-1">
+      <input type="radio" name="publication-tag" id="publication-tag-all" aria-labelledby="publication-label-all" checked>
+      {% for cat in category.types %}
+      <input type="radio" name="publication-tag" id="publication-tag-{{ cat | replace: ' / ', '' | replace: ' ', '-' }}" aria-labelledby="publication-label-{{ cat | replace: ' / ', '' | replace: ' ', '-' }}">
+      {% endfor %}
+
+      <div class="publication-filter-row">
+        <label for="publication-tag-all" class="publication-tag-label publication-tag-all publication-category" id="publication-label-all">All</label>
+        {% for cat in category.types %}
+        <label for="publication-tag-{{ cat | replace: ' / ', '' | replace: ' ', '-' }}" class="publication-tag-label publication-category publication-tag-{{ cat | replace: ' / ', '' | replace: ' ', '-' }}" id="publication-label-{{ cat | replace: ' / ', '' | replace: ' ', '-' }}">{{ cat }}</label>
+        {% endfor %}
+      </div>
+
+      <div class="mt-4" id="publications">
+        {% for pub in publications %}
+        <div class="mb-3 w-full publication-year-section {% unless forloop.first %}mt-5{% endunless %}" id="{{ pub.name }}" data-publication-year="{{ pub.name }}">
+          <p class="publication-year">{{ pub.name }}</p>
+        </div>
+        {% assign pub_items_sorted = pub.items | sort: "month" | reverse %}
+        {% for paper in pub_items_sorted %}
+        <div class="publication-item w-full {% for cat_each in paper.category %}publication-tag-{{ cat_each | replace: ' / ', '' | replace: ' ', '-' }} {% endfor %}">
+          <p class="pb-.5"><span class="publication-venue">{{ paper.venue }}</span>{% if paper.note %} <span class="publication-note">({{ paper.note }})</span>{% endif %}</p>
+          <p class="pb-1 publication-title-row">
+            <a class="publication-title" href="{{ '/publication/' | append: paper.slug | relative_url }}">{{ paper.title }}</a>
+          </p>
+          <p class="pb-1.5 publication-author-list">
+            {% for author in paper.authors %}
+            {% assign author_data = site.data.people.people | where:"name", author | first %}
+            {% if author == site.author.name %}
+            <a href="{{ site.author.url }}">{{ author }}</a>{% if paper.coauthors contains author %}*{% endif %}
+            {% elsif author_data and author_data.website %}
+            <a href="{{ author_data.website }}" class="publication-coauthor">{{ author }}</a>{% if paper.coauthors contains author %}*{% endif %}
+            {% else %}
+            {{ author }}{% if paper.coauthors contains author %}*{% endif %}
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+            {% if paper.coauthors %} <span class="publication-cofirst ml-2">(* co-first authorship)</span>{% endif %}
+          </p>
+          {% if paper.award %}
+          <p class="mb-2 inline-flex items-center font-light"><i data-lucide="trophy" class="mr-1.5"></i>{{ paper.award }}</p>
+          {% endif %}
+          <p class="publication-metadata">
+            <a href="{{ '/publication/' | append: paper.slug | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
+            {% unless paper.pdf == false %}
+            <a href="{% if paper.pdf %}{{ paper.pdf }}{% else %}{{ '/assets/pdf/' | append: paper.slug | append: '.pdf' | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>{% if paper.venue contains "arXiv" or paper.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
+            {% endunless %}
+            {% if paper.code %}
+            <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer"><span class="metadata-icon metadata-icon-github" aria-hidden="true"></span>Code</a>
+            {% endif %}
+            {% if paper.video %}
+            <a href="{% if paper.video contains 'http' %}{{ paper.video }}{% else %}{{ 'https://youtu.be/' | append: paper.video }}{% endif %}" target="_blank" rel="noopener noreferrer"><i data-lucide="play" class="mr-1"></i>Video</a>
+            {% endif %}
+            {% if paper.demo %}
+            <a href="{{ paper.demo }}" target="_blank" rel="noopener noreferrer"><i data-lucide="app-window-mac" class="mr-1"></i>Demo</a>
+            {% endif %}
+          </p>
+        </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

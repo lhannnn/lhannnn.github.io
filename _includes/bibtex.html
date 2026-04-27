@@ -1,0 +1,23 @@
+<button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+<pre class="bibtex">{% if page.bibtex %}{{ page.bibtex | escape }}{% else %}
+@inproceedings{ {{- page.authors[0] | split: ' ' | last | downcase -}}{{ page.year }}{{ page.title | split: ' ' | first | replace: ':','' | replace: ',','' | replace: '.','' | replace: '?','' | replace: '!','' | replace: "'","" | replace: '"','' | replace: '(','' | replace: ')','' | replace: '&','' | replace: '-','' | replace: '_','' | downcase }},
+  title = { {{- page.title -}} },
+  author = { {%- for a in page.authors -%}{{ a }}{% unless forloop.last %} and {% endunless %}{%- endfor -%} },
+  booktitle = { {{- page.venue_full | default: page.venue -}} },
+  year = { {{- page.year -}} }
+}
+{% endif %}</pre>
+
+<script>
+  function copyBibtex(button) {
+    var pre = button.nextElementSibling;
+    var temp = document.createElement("textarea");
+    temp.value = pre.innerText;
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+    button.textContent = "Copied";
+    setTimeout(function () { button.textContent = "Copy BibTeX"; }, 2000);
+  }
+</script>

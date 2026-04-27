@@ -1,0 +1,11 @@
+project:
+  - title: "SPASM"
+    slug: "spasm"
+    image: "spasm-framework.png"
+    venue: "Findings of ACL 2026"
+    description: "A stability-first framework for persona-driven LLM-LLM dialogue simulation with egocentric context projection."
+  - title: "DialogGuard"
+    slug: "dialogguard"
+    image: "dialogguard-interface.png"
+    venue: "ACL 2026 Demo"
+    description: "A practitioner-facing interface for multi-agent psychosocial safety evaluation of sensitive LLM responses."

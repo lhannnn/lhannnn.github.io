@@ -1,0 +1,8 @@
+people:
+  - name: "Han Luo"
+    affiliation: "University of Leeds / Southwest Jiaotong University"
+    website: "https://lhannnn.github.io"
+    image: han-luo.jpg
+  - name: "Guy Laban"
+    affiliation: "Ben-Gurion University of the Negev"
+    image: guy-laban.jpg

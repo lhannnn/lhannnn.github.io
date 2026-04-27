@@ -1,0 +1,85 @@
+---
+layout: default
+title: Project
+permalink: /project
+description: Projects of Han Luo
+---
+
+{% assign projects = site.data.project.project %}
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<div class="px-3 py-4">
+    <p class="page-title">Project</p>
+    <div class="project-grid mt-10">
+        {% for proj in projects %}
+        <div class="grid-item">
+            <div class="project-item-container" data-modal-toggle data-modal-target="#modal{{ forloop.index }}">
+                <img class="project-item-image" src="{{ proj.image | prepend: '/assets/images/project/' | relative_url }}" loading="lazy" decoding="async">
+                <div class="project-item-container-inner">
+                    <p class="project-item-title">{{ proj.title }}</p>
+                    <p class="project-item-description">{{ proj.description }}</p>
+                    <div class="project-item-tags">
+                      <p>
+                        {% for tag in proj.tags %}
+                        <a title="" href="">{{ tag }}</a>
+                        {% endfor %}
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal{{ forloop.index }}" tabindex="-1" aria-labelledby="exampleModal{{ forloop.index }}" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <div style="display: block !important">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ proj.title }}</h5>
+                        <p class="modal-description">{{ proj.description }}</p>
+                        <p class="modal-link">{% if proj.paper %}<a href="{% if proj.paper contains 'http' %}{{ proj.paper }}{% else %}{{ '/assets/pdf/' | append: proj.paper | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>Paper</a>{% endif %}{% if proj.publication %}<a href="{{ proj.publication | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Publication</a>{% endif %}{% if proj.video %}<a href="{{ proj.video }}"><i data-lucide="play" class="mr-1"></i>Video</a>{% endif %}{% if proj.slide %}<a href="{{ '/assets/pdf/' | append: proj.slide | relative_url }}"><i data-lucide="presentation" class="mr-1"></i>Slide</a>{% endif %}{% if proj.appstore %}<a href="{{ proj.appstore }}"><i data-lucide="cloud-download" class="mr-1"></i>App Store</a>{% endif %}{% if proj.code %}<a href="{{ proj.code }}" target="_blank" rel="noopener noreferrer"><span class="metadata-icon metadata-icon-github" aria-hidden="true"></span>Code</a>{% endif %}{% if proj.demo %}<a href="{{ proj.demo }}" target="_blank" rel="noopener noreferrer"><i data-lucide="app-window-mac" class="mr-1"></i>Demo</a>{% endif %}{% if proj.link %}<a href="{{ proj.link }}"><i data-lucide="external-link" class="mr-1"></i>Link</a>{% endif %}</p>
+                    </div>
+                    <button type="button" class="btn-close invert-on-dark" data-modal-dismiss aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {{ proj.detail | replace: 'site.baseurl', site.baseurl }}
+                </div>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var grid = document.querySelector('.project-grid');
+    if (!grid || typeof Masonry === 'undefined') {
+      return;
+    }
+
+    var masonry = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      transitionDuration: '0.22s'
+    });
+
+    if (typeof imagesLoaded !== 'undefined') {
+      imagesLoaded(grid, function () {
+        masonry.layout();
+      });
+
+      imagesLoaded(grid).on('progress', function () {
+        masonry.layout();
+      });
+    }
+
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        masonry.layout();
+      }, 100);
+    });
+  });
+</script>

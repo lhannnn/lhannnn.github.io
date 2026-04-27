@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<div class="px-3 py-4">
+  <div class="pb-3">
+    <p class="publication-detail-title">{{ page.title }}</p>
+    {% if page.note %}
+    <p><span>{{ page.venue }}.</span> ({{ page.note }})</p>
+    {% else %}
+    <p>Published in {{ page.venue }}.</p>
+    {% endif %}
+    {% if page.award %}
+    <p class="inline-flex items-center"><i data-lucide="trophy" class="mr-1.5"></i>{{ page.award }}</p>
+    {% endif %}
+  </div>
+
+  {% if page.coauthors %}
+  <p class="publication-detail-cofirst publication-detail-authors-note">(* co-first authorship)</p>
+  {% endif %}
+  <div class="publication-detail-authors mb-8">
+    {% for author in page.authors %}
+    {% assign author_data = site.data.people.people | where:"name", author | first %}
+    <div class="publication-detail-author-card">
+      <div>
+        {% assign author_image = '/assets/images/author/default.jpg' %}
+        {% if author_data and author_data.image %}
+        {% assign author_image = author_data.image | prepend: '/assets/images/author/' %}
+        {% endif %}
+        {% if author_data and author_data.website %}
+        <a href="{{ author_data.website }}"><div class="publication-detail-author-image" style="{{ author_image | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div></a>
+        {% else %}
+        <div class="publication-detail-author-image" style="{{ author_image | relative_url | prepend: 'background-image: url(' | append: ')' }}"></div>
+        {% endif %}
+      </div>
+      <div class="mt-2">
+        {% if author_data and author_data.website %}
+        <a href="{{ author_data.website }}">
+          <p class="publication-detail-author-name">{{ author }}{% if page.coauthors contains author %}*{% endif %}</p>
+          {% if author_data.affiliation %}<p class="publication-detail-affiliation-name">{{ author_data.affiliation }}</p>{% endif %}
+        </a>
+        {% else %}
+        <p class="publication-detail-author-name">{{ author }}{% if page.coauthors contains author %}*{% endif %}</p>
+        {% if author_data and author_data.affiliation %}<p class="publication-detail-affiliation-name">{{ author_data.affiliation }}</p>{% endif %}
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="mb-8">
+    <img class="publication-detail-image" alt="{{ page.title }}" src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ page.slug | prepend: '/assets/images/publication/' | append: '.jpg' | relative_url }}{% endif %}"/>
+  </div>
+
+  <div class="mb-8">
+    <p class="section-title">Abstract</p>
+    <p>{{ page.abstract }}</p>
+  </div>
+
+  {% assign rendered_content = content | strip %}
+  {% if rendered_content != "" %}
+  <div class="publication-detail-content mb-8">
+    {{ content }}
+  </div>
+  {% endif %}
+
+  <div>
+    <p class="section-title">Materials</p>
+    <div class="publication-detail-metadata">
+      {% unless page.pdf == false %}
+      <a href="{% if page.pdf %}{{ page.pdf }}{% else %}{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}{% endif %}" rel="external"><i data-lucide="file" class="mr-1"></i>{% if page.venue contains "arXiv" or page.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
+      {% endunless %}
+      {% if page.code %}
+      <a href="{{ page.code }}" target="_blank" rel="noopener noreferrer"><span class="metadata-icon metadata-icon-github" aria-hidden="true"></span>Code</a>
+      {% endif %}
+      {% if page.video %}
+      <a href="{% if page.video contains 'http' %}{{ page.video }}{% else %}{{ page.video | prepend: 'https://youtu.be/' }}{% endif %}" rel="external"><i data-lucide="play" class="mr-1"></i>Video</a>
+      {% endif %}
+      {% if page.slide %}
+      <a href="{{ page.slide | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i data-lucide="presentation" class="mr-1"></i>Slides</a>
+      {% endif %}
+      {% if page.poster %}
+      <a href="{{ page.poster | prepend: '/assets/pdf/' | relative_url }}" rel="external"><i data-lucide="book-image" class="mr-1"></i>Poster</a>
+      {% endif %}
+      {% if page.demo %}
+      <a href="{{ page.demo }}" target="_blank" rel="noopener noreferrer"><i data-lucide="app-window-mac" class="mr-1"></i>Demo</a>
+      {% endif %}
+      <input type="checkbox" id="bibtex-toggle" style="display: none;" />
+      <label for="bibtex-toggle" style="cursor: pointer;">
+        <i data-lucide="book-text" class="mr-1"></i>BibTeX
+      </label>
+
+      <div id="bibtex-block">
+        {% include bibtex.html %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+---
+layout: default
+title: Basketball
+permalink: /basketball
+description: Basketball notes and interests of Han Luo
+---
+
+<div class="px-3 py-4">
+  <p class="page-title">Basketball</p>
+
+  <div class="basketball-index-intro">
+    <p>
+      A growing collection of basketball stories, photos, and small memories from different periods.
+    </p>
+  </div>
+
+  <div class="basketball-story-list" aria-label="Basketball stories">
+    <a class="basketball-story-link" href="{{ '/basketball/march-april-2023' | relative_url }}">
+      <img src="{{ '/assets/images/basketball/basketball-2023-team.jpg' | relative_url }}" alt="A basketball team posing together on an outdoor court" loading="lazy" decoding="async">
+      <span class="basketball-story-body">
+        <span class="basketball-story-title">March-April 2023</span>
+        <span class="basketball-story-location">Quzhou No.2 High School</span>
+        <span class="basketball-story-summary">Spring tournament photos, injury memories, teammates, and court-side moments.</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .basketball-index-intro {
+    max-width: 46rem;
+    margin-top: 2rem;
+    color: rgb(72 57 33);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .basketball-story-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .basketball-story-link {
+    display: grid;
+    grid-template-columns: minmax(7.5rem, 0.45fr) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    color: rgb(72 57 33) !important;
+    text-decoration: none !important;
+  }
+
+  .basketball-story-link img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgb(var(--shadow) / 0.12);
+  }
+
+  .basketball-story-body {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .basketball-story-title {
+    font-size: 1.2rem;
+    font-weight: 560;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .basketball-story-location {
+    color: rgb(128 119 101);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .basketball-story-summary {
+    color: rgb(128 119 101);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 767px) {
+    .basketball-story-link {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

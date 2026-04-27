@@ -1,0 +1,35 @@
+<footer class="mt-6">
+  <div class="footer-container px-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="footer-text !mb-1">&copy; {{ "now" | date: "%Y" }} {{ site.author.name }}</p>
+        <p class="footer-text inline-flex items-center !mb-0.5">
+          <a href="https://github.com/donghoon-io/donghoon-io.github.io" target="_blank" rel="noopener noreferrer" style="font-weight: 300">
+            Theme adapted from Donghoon's theme
+          </a>
+        </p>
+      </div>
+      <div class="md:col-span-7">
+        <p>
+          <a class="footer-text footer-link" href="mailto:{{ site.author.email }}"><i data-lucide="mail" class="mr-2 h-[.95em] w-[.95em]"></i>Email</a><br>
+          {% if site.links.github and site.links.github != "" %}<a class="footer-text footer-link" target="_blank" rel="noopener noreferrer" href="{{ site.links.github }}"><img src="{{ '/assets/images/icons/github.svg' | relative_url }}" alt="" class="footer-social-icon">GitHub</a>{% endif %}{% if site.links.google_scholar and site.links.google_scholar != "" %}<br>
+          <a class="footer-text footer-link" target="_blank" rel="noopener noreferrer" href="{{ site.links.google_scholar }}"><img src="{{ '/assets/images/icons/google-scholar.svg' | relative_url }}" alt="" class="footer-social-icon">Google Scholar</a>{% endif %}{% if site.links.linkedin and site.links.linkedin != "" %}<br>
+          <a class="footer-text footer-link" target="_blank" rel="noopener noreferrer" href="{{ site.links.linkedin }}"><img src="{{ '/assets/images/icons/linkedin.svg' | relative_url }}" alt="" class="footer-social-icon">LinkedIn</a>{% endif %}<br>
+          <a class="footer-text footer-link" {% if site.links.instagram and site.links.instagram != "" %}target="_blank" rel="noopener noreferrer" href="{{ site.links.instagram }}"{% else %}href="#" aria-disabled="true"{% endif %}><img src="{{ '/assets/images/icons/instagram.svg' | relative_url }}" alt="" class="footer-social-icon">Instagram</a>{% if site.links.x and site.links.x != "" %}<br>
+          <a class="footer-text footer-link" target="_blank" rel="noopener noreferrer" href="{{ site.links.x }}"><i data-lucide="external-link" class="mr-2 h-[.95em] w-[.95em]"></i>X</a>{% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-social-icon {
+    display: inline-block;
+    width: 0.95em;
+    height: 0.95em;
+    margin-right: 0.5rem;
+    vertical-align: -0.12em;
+    opacity: 0.78;
+  }
+</style>
