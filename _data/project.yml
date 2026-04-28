@@ -8,7 +8,7 @@ project:
       - Simulation
     image: spasm-framework.png
     paper: SPASM.pdf
-    publication: /publication/spasm
+    publication: /publication/spasm/
     code: "https://github.com/lhannnn/SPASM"
     detail: |
       <p>SPASM is a stability-first framework for persona-driven LLM-LLM dialogue simulation. The project addresses long-horizon identity failures such as persona drift, role confusion, and echoing when language models are used to generate synthetic multi-turn dialogue data.</p>
@@ -26,7 +26,7 @@ project:
       - Interface
     image: dialogguard-interface.png
     paper: DialogGuard.pdf
-    publication: /publication/dialogguard
+    publication: /publication/dialogguard/
     demo: "https://anonymous.4open.science/r/dialogguard-web-CE7E"
     detail: |
       <p>DialogGuard is a web interface for auditing LLM responses in sensitive conversational contexts. It wraps arbitrary generative models with reusable LLM-as-a-judge pipelines and presents practitioner-facing risk scores and natural-language rationales.</p>

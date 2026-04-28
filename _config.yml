@@ -28,7 +28,7 @@ plugins:
 collections:
   publication:
     output: true
-    permalink: /publication/:slug
+    permalink: /publication/:slug/
 
 defaults:
   - scope:

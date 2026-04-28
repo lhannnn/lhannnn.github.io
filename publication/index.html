@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Publication
-permalink: /publication
+permalink: /publication/
 description: Publication list of Han Luo
 ---
 
@@ -64,7 +64,7 @@ description: Publication list of Han Luo
         <div class="publication-item w-full {% for cat_each in paper.category %}publication-tag-{{ cat_each | replace: ' / ', '' | replace: ' ', '-' }} {% endfor %}">
           <p class="pb-.5"><span class="publication-venue">{{ paper.venue }}</span>{% if paper.note %} <span class="publication-note">({{ paper.note }})</span>{% endif %}</p>
           <p class="pb-1 publication-title-row">
-            <a class="publication-title" href="{{ '/publication/' | append: paper.slug | relative_url }}">{{ paper.title }}</a>
+            <a class="publication-title" href="{{ '/publication/' | append: paper.slug | append: '/' | relative_url }}">{{ paper.title }}</a>
           </p>
           <p class="pb-1.5 publication-author-list">
             {% for author in paper.authors %}
@@ -84,7 +84,7 @@ description: Publication list of Han Luo
           <p class="mb-2 inline-flex items-center font-light"><i data-lucide="trophy" class="mr-1.5"></i>{{ paper.award }}</p>
           {% endif %}
           <p class="publication-metadata">
-            <a href="{{ '/publication/' | append: paper.slug | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
+            <a href="{{ '/publication/' | append: paper.slug | append: '/' | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
             {% unless paper.pdf == false %}
             <a href="{% if paper.pdf %}{{ paper.pdf }}{% else %}{{ '/assets/pdf/' | append: paper.slug | append: '.pdf' | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>{% if paper.venue contains "arXiv" or paper.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
             {% endunless %}
