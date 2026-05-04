@@ -1,4 +1,7 @@
 list:
+  - date: 2026-05-01
+    title: "Paper accepted to ICML 2026"
+    description: "Our collaborative paper, Plan in Sandbox, Navigate in Open Worlds, was accepted to ICML 2026."
   - date: 2026-04-27
     title: "Two papers accepted to ACL 2026"
     description: "SPASM was accepted to Findings of ACL 2026, and DialogGuard was accepted to ACL 2026 System Demonstrations."

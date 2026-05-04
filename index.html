@@ -57,7 +57,7 @@ description: Academic personal website for Han Luo
             {% if project.description %}<p class="home-project-description">{{ project.description }}</p>{% endif %}
             {% if project_pub %}
             <p class="home-project-metadata">
-              <a href="{{ '/publication/' | append: project_pub.slug | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
+              <a href="{{ '/publication/' | append: project_pub.slug | append: '/' | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
               {% unless project_pub.pdf == false %}
               <a href="{% if project_pub.pdf %}{{ project_pub.pdf }}{% else %}{{ '/assets/pdf/' | append: project_pub.slug | append: '.pdf' | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>PDF</a>
               {% endunless %}

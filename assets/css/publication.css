@@ -285,6 +285,20 @@
   object-fit: contain;
   margin: 1rem auto;
 }
+
+.publication-detail-content img.publication-detail-wide-image {
+  max-width: 100%;
+  max-height: none;
+  width: 100%;
+}
+
+.publication-detail-content .publication-figure-caption {
+  max-width: 95%;
+  margin: -0.4rem auto 1.6rem !important;
+  color: rgb(var(--ink) / 0.68);
+  font-size: .82rem;
+  line-height: 1.5;
+}
 .publication-detail-cofirst {
   font-size: .8rem;
   font-weight: 200;

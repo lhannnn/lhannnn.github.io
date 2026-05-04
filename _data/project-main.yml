@@ -1,4 +1,9 @@
 project:
+  - title: "Plan in Sandbox"
+    slug: "plan-in-sandbox-navigate"
+    image: "plan-in-sandbox-sage-agent.png"
+    venue: "ICML 2026"
+    description: "A physics-grounded sandbox framework for learning abstracted embodied navigation experience."
   - title: "SPASM"
     slug: "spasm"
     image: "spasm-framework.png"
