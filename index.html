@@ -61,6 +61,9 @@ description: Academic personal website for Han Luo
               {% unless project_pub.pdf == false %}
               <a href="{% if project_pub.pdf %}{{ project_pub.pdf }}{% else %}{{ '/assets/pdf/' | append: project_pub.slug | append: '.pdf' | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>PDF</a>
               {% endunless %}
+              {% if project_pub.arxiv %}
+              <a href="{{ project_pub.arxiv }}" target="_blank" rel="noopener noreferrer"><i data-lucide="scroll-text" class="mr-1"></i>arXiv</a>
+              {% endif %}
               {% if project_pub.code %}
               <a href="{{ project_pub.code }}" target="_blank" rel="noopener noreferrer"><span class="metadata-icon metadata-icon-github" aria-hidden="true"></span>Code</a>
               {% endif %}

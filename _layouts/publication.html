@@ -70,6 +70,9 @@ layout: default
       {% unless page.pdf == false %}
       <a href="{% if page.pdf %}{{ page.pdf }}{% else %}{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}{% endif %}" rel="external"><i data-lucide="file" class="mr-1"></i>{% if page.venue contains "arXiv" or page.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
       {% endunless %}
+      {% if page.arxiv %}
+      <a href="{{ page.arxiv }}" target="_blank" rel="noopener noreferrer"><i data-lucide="scroll-text" class="mr-1"></i>arXiv</a>
+      {% endif %}
       {% if page.code %}
       <a href="{{ page.code }}" target="_blank" rel="noopener noreferrer"><span class="metadata-icon metadata-icon-github" aria-hidden="true"></span>Code</a>
       {% endif %}

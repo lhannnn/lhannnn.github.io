@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/publication.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/news.css' | relative_url }}">
+  {% if page.extra_css %}
+  {% for css in page.extra_css %}
+  <link rel="stylesheet" href="{{ css | relative_url }}">
+  {% endfor %}
+  {% endif %}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +65,11 @@
   <meta name="citation_conference_title" content="{{ page.venue }}">
   {% endif %}
   {% unless page.pdf == false %}
-  <meta name="citation_pdf_url" content="{{ site.url }}{% if page.pdf %}{{ page.pdf }}{% else %}{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' }}{% endif %}">
+  {% if page.pdf %}
+  <meta name="citation_pdf_url" content="{% if page.pdf contains 'http' %}{{ page.pdf }}{% else %}{{ site.url }}{{ page.pdf }}{% endif %}">
+  {% else %}
+  <meta name="citation_pdf_url" content="{{ site.url }}{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' }}">
+  {% endif %}
   {% endunless %}
   {% endif %}
 </head>

@@ -3,15 +3,17 @@ project:
     description: "Learning physics-grounded abstracted experience for embodied navigation."
     tags:
       - ICML 2026
+      - arXiv:2605.10118
       - Embodied Navigation
       - Vision-Language Models
       - Reinforcement Learning
     image: plan-in-sandbox-sage-agent.png
-    paper: Plan_in_Sandbox_Navigate.pdf
+    paper: https://arxiv.org/pdf/2605.10118
+    arxiv: https://arxiv.org/abs/2605.10118
     publication: /publication/plan-in-sandbox-navigate/
     detail: |
       <p>This project introduces SAGE, a framework for learning embodied navigation policies from physics-grounded semantic abstractions. Instead of depending only on photorealistic simulation, the agent learns from sandbox environments that preserve the structure needed for planning and control.</p>
-      <p>The framework combines sandbox task generation, reinforcement learning over abstracted experience, and transfer to open-world navigation. The paper was accepted to ICML 2026 on May 1, 2026.</p>
+      <p>The framework combines sandbox task generation, reinforcement learning over abstracted experience, and transfer to open-world navigation. The paper was accepted to ICML 2026 on May 1, 2026 and is available as arXiv:2605.10118.</p>
       <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/plan-in-sandbox-sage-agent.png" alt="SAGE agent overview">
       <p class="project-modal-caption">SAGE overview: sandbox generation, policy evolution, open-world navigation, and benchmark performance.</p>
       <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/plan-in-sandbox-sage-framework.png" alt="SAGE framework">
