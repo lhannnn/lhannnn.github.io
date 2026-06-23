@@ -42,7 +42,15 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{% if page.url == '/' %}{{ page.title | default: site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
   <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines }}">
+  {% if page.url == "/" %}
+  <meta property="og:image" content="https://lhannnn.github.io/assets/images/profile.jpg">
+  <meta property="og:image:alt" content="Han Luo portrait">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lhannnn.github.io/assets/images/profile.jpg">
+  <meta name="twitter:image:alt" content="Han Luo portrait">
+  {% else %}
   <meta property="og:image" content="{% if page.image %}{{ page.image | relative_url }}{% elsif page.slug %}{{ '/assets/images/publication/' | append: page.slug | append: '.jpg' | relative_url }}{% else %}{{ '/assets/images/main/opengraph.jpg' | relative_url }}{% endif %}">
+  {% endif %}
 
   {% if page.url == "/" %}
   <script type="application/ld+json">
@@ -51,7 +59,9 @@
     "@type": "ProfilePage",
     "url": "https://lhannnn.github.io/",
     "name": "Han Luo",
+    "image": "https://lhannnn.github.io/assets/images/profile.jpg",
     "primaryImageOfPage": "https://lhannnn.github.io/assets/images/profile.jpg",
+    "thumbnailUrl": "https://lhannnn.github.io/assets/images/profile.jpg",
     "mainEntity": {
       "@type": "Person",
       "name": "Han Luo",
