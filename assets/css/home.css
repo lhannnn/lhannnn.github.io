@@ -213,6 +213,8 @@ a:hover .affiliation-logo {
   font-family: 'Newsreader';
   font-size: 1.5rem !important;
   font-weight: 500 !important;
+  line-height: 1.2;
+  margin: 1.33em 0 1.5rem;
 }
 
 .vertical-center p a,

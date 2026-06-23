@@ -44,6 +44,38 @@
   <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines }}">
   <meta property="og:image" content="{% if page.image %}{{ page.image | relative_url }}{% elsif page.slug %}{{ '/assets/images/publication/' | append: page.slug | append: '.jpg' | relative_url }}{% else %}{{ '/assets/images/main/opengraph.jpg' | relative_url }}{% endif %}">
 
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://lhannnn.github.io/",
+    "name": "Han Luo",
+    "primaryImageOfPage": "https://lhannnn.github.io/assets/images/profile.jpg",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Han Luo",
+      "url": "https://lhannnn.github.io/",
+      "image": "https://lhannnn.github.io/assets/images/profile.jpg",
+      "affiliation": [
+        { "@type": "CollegeOrUniversity", "name": "University of Leeds" },
+        { "@type": "CollegeOrUniversity", "name": "Southwest Jiaotong University" }
+      ],
+      "sameAs": [
+        "https://github.com/lhannnn",
+        "https://scholar.google.com/citations?user=F1jGOoMAAAAJ&hl=en",
+        "https://www.linkedin.com/in/han-luo-5592a9342/"
+      ],
+      "knowsAbout": [
+        "large language model agents",
+        "multi-agent systems",
+        "responsible AI"
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     window.addEventListener('load', function () {
