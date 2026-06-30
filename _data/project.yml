@@ -1,4 +1,27 @@
 project:
+  - title: "Agentic Abstention"
+    description: "Do LLM agents know when to stop instead of act?"
+    tags:
+      - arXiv:2606.28733
+      - LLM Agents
+      - Abstention
+      - Responsible AI
+      - Context Engineering
+    image: agentic-abstention-teaser.png
+    paper: https://arxiv.org/pdf/2606.28733
+    arxiv: https://arxiv.org/abs/2606.28733
+    publication: /publication/agentic-abstention/
+    code: "https://anonymous.4open.science/r/agentic-abstention-A908"
+    link: /agentic-abstention/
+    detail: |
+      <p>Agentic Abstention studies when tool-using LLM agents should stop acting under uncertainty. Instead of treating abstention as a single-turn answer-or-refuse decision, the project frames it as a sequential choice: answer, gather more evidence, or abstain.</p>
+      <p>We evaluate 13 LLM-as-agent systems and 2 agent scaffolds on more than 28,000 tasks across web shopping, terminal environments, and interactive question answering. The results show that many agents can eventually abstain but often do so too late.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/agentic-abstention/timely-abstention-teaser.png" alt="Timely, delayed, and failed abstention trajectories">
+      <p class="project-modal-caption">Timely, delayed, and failed abstention trajectories in a web shopping task.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/agentic-abstention/abstention-recall.png" alt="Abstention recall curves across Web, Terminal, and QA settings">
+      <p class="project-modal-caption">Abstention recall increases with interaction budget, while early abstention remains difficult.</p>
+      <hr>
+      <p><b>[My role in this project]</b><br>Co-first author; problem formulation, benchmark construction, experiments, analysis, project page, and writing.</p>
   - title: "Plan in Sandbox, Navigate in Open Worlds"
     description: "Learning physics-grounded abstracted experience for embodied navigation."
     tags:

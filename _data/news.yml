@@ -1,4 +1,7 @@
 list:
+  - date: 2026-06-27
+    title: "Agentic Abstention preprint released"
+    description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, is now available as arXiv:2606.28733."
   - date: 2026-05-11
     title: "SAGE arXiv preprint released"
     description: "Our ICML 2026 paper, Plan in Sandbox, Navigate in Open Worlds, is now available as arXiv:2605.10118."

@@ -1,4 +1,9 @@
 project:
+  - title: "Agentic Abstention"
+    slug: "agentic-abstention"
+    image: "agentic-abstention-teaser.png"
+    venue: "arXiv 2026"
+    description: "A benchmark and context-engineering study of when LLM agents should stop acting and abstain."
   - title: "Plan in Sandbox"
     slug: "plan-in-sandbox-navigate"
     image: "plan-in-sandbox-sage-agent.png"
