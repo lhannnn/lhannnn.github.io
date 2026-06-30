@@ -22,15 +22,14 @@ demo: "/agentic-abstention/"
 image: "/assets/images/agentic-abstention/timely-abstention-teaser.png"
 abstract: "This work introduces agentic abstention: the problem of deciding when a tool-using language model agent should stop acting under uncertainty. Unlike single-turn abstention, agentic abstention is sequential: an agent may answer, abstain, or gather more evidence at each step. The paper evaluates LLM-as-agent systems across web shopping, terminal environments, and interactive question answering, showing that many agents abstain too late or fail to abstain when continued interaction is unhelpful. It also introduces CONVOLVE, a context-engineering method that distills interaction trajectories into reusable stopping rules."
 bibtex: |
-  @misc{luo2026agenticabstention,
-    title = {Agentic Abstention: Do Agents Know When to Stop Instead of Act?},
-    author = {Han Luo and Bingbing Wen and Lucy Lu Wang},
-    year = {2026},
-    eprint = {2606.28733},
-    archivePrefix = {arXiv},
-    primaryClass = {cs.AI},
-    url = {https://arxiv.org/abs/2606.28733},
-    note = {Han Luo and Bingbing Wen contributed equally}
+  @misc{luo2026agenticabstentionagentsknow,
+    title={Agentic Abstention: Do Agents Know When to Stop Instead of Act?},
+    author={Han Luo and Bingbing Wen and Lucy Lu Wang},
+    year={2026},
+    eprint={2606.28733},
+    archivePrefix={arXiv},
+    primaryClass={cs.AI},
+    url={https://arxiv.org/abs/2606.28733},
   }
 ---
 
