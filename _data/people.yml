@@ -6,3 +6,8 @@ people:
   - name: "Guy Laban"
     affiliation: "Ben-Gurion University of the Negev"
     image: guy-laban.jpg
+  - name: "Bingbing Wen"
+    image: bingbing-wen.png
+  - name: "Lucy Lu Wang"
+    affiliation: "University of Washington"
+    image: lucy-lu-wang.jpg
