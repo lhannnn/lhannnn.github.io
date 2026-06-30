@@ -7,7 +7,8 @@ people:
     affiliation: "Ben-Gurion University of the Negev"
     image: guy-laban.jpg
   - name: "Bingbing Wen"
+    affiliation: "University of Washington"
     image: bingbing-wen.png
   - name: "Lucy Lu Wang"
-    affiliation: "University of Washington"
+    affiliation: "University of Washington / Allen Institute for AI"
     image: lucy-lu-wang.jpg
