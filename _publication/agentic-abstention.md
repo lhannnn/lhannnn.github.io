@@ -17,7 +17,7 @@ category:
 publication_type: "preprint"
 pdf: "https://arxiv.org/pdf/2606.28733"
 arxiv: "https://arxiv.org/abs/2606.28733"
-code: "https://anonymous.4open.science/r/agentic-abstention-A908"
+code: "https://github.com/lhannnn/agentic-abstention"
 demo: "/agentic-abstention/"
 image: "/assets/images/agentic-abstention/timely-abstention-teaser.png"
 abstract: "This work introduces agentic abstention: the problem of deciding when a tool-using language model agent should stop acting under uncertainty. Unlike single-turn abstention, agentic abstention is sequential: an agent may answer, abstain, or gather more evidence at each step. The paper evaluates LLM-as-agent systems across web shopping, terminal environments, and interactive question answering, showing that many agents abstain too late or fail to abstain when continued interaction is unhelpful. It also introduces CONVOLVE, a context-engineering method that distills interaction trajectories into reusable stopping rules."

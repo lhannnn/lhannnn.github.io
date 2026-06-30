@@ -11,7 +11,7 @@ project:
     paper: https://arxiv.org/pdf/2606.28733
     arxiv: https://arxiv.org/abs/2606.28733
     publication: /publication/agentic-abstention/
-    code: "https://anonymous.4open.science/r/agentic-abstention-A908"
+    code: "https://github.com/lhannnn/agentic-abstention"
     link: /agentic-abstention/
     detail: |
       <p>Agentic Abstention studies when tool-using LLM agents should stop acting under uncertainty. Instead of treating abstention as a single-turn answer-or-refuse decision, the project frames it as a sequential choice: answer, gather more evidence, or abstain.</p>
