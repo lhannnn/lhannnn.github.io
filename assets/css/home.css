@@ -6,6 +6,28 @@
 
 /* main */
 
+.home-bio {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.home-bio a {
+  font-weight: inherit;
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgb(var(--ink) / 0.3) !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.18s ease;
+}
+
+.home-bio a:hover,
+.home-bio a:focus-visible {
+  font-weight: inherit !important;
+  text-decoration-color: currentColor !important;
+}
+
 .cryptedmail:after {
   content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
