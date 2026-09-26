@@ -8,13 +8,13 @@ authors:
 coauthors:
   - "Han Luo"
   - "Bingbing Wen"
-venue: "arXiv 2026"
-note: "arXiv:2606.28733"
+venue: "NeurIPS 2026"
+note: "Accepted"
 year: 2026
 month: 6
 category:
-  - Preprint
-publication_type: "preprint"
+  - Conference
+publication_type: "conference"
 pdf: "https://arxiv.org/pdf/2606.28733"
 arxiv: "https://arxiv.org/abs/2606.28733"
 code: "https://github.com/lhannnn/agentic-abstention"

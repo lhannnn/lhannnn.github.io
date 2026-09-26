@@ -13,9 +13,9 @@ description: Travel notes of Han Luo
     {% if travels and travels.size > 0 %}
     {% for travel in travels %}
     <div class="mb-5">
-      <p class="news-date pb-1">{{ travel.date | date: "%b %-d, %Y" }}</p>
-      <p class="news-title">{{ travel.detail }}</p>
-      <p class="news-description">{{ travel.location }}</p>
+      <p class="news-date pb-1">{% if travel.date_label %}{{ travel.date_label }}{% else %}{{ travel.date | date: "%b %-d, %Y" }}{% endif %}</p>
+      <p class="news-title">{{ travel.location }}</p>
+      {% if travel.detail %}<p class="news-description">{{ travel.detail }}</p>{% endif %}
     </div>
     {% endfor %}
     {% else %}

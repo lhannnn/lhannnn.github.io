@@ -2,6 +2,7 @@ project:
   - title: "Agentic Abstention"
     description: "Do LLM agents know when to stop instead of act?"
     tags:
+      - NeurIPS 2026
       - arXiv:2606.28733
       - LLM Agents
       - Abstention

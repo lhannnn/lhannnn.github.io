@@ -1,4 +1,7 @@
 list:
+  - date: 2026-09-26
+    title: "Agentic Abstention accepted to NeurIPS 2026"
+    description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, has been accepted to NeurIPS 2026."
   - date: 2026-06-27
     title: "Agentic Abstention preprint released"
     description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, is now available as arXiv:2606.28733."

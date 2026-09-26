@@ -104,12 +104,11 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
 
     <div class="mt-6 flex flex-col sm:col-span-4 sm:mt-0">
       <div class="flex flex-1 flex-col">
-        <p class="section-title">Upcoming</p>
+        <p class="section-title">Where to find me</p>
         {% for travel in travels limit: 10 %}
         <div class="mb-2">
-          <p class="travel-title mb-0 inline-flex items-center">
-            <span class="travel-date mr-2" style="width: 55px;">{{ travel.date | date: "%b %Y" }}</span>
-            <span class="travel-detail">{{ travel.detail }}</span>
+          <p class="travel-title mb-0" style="display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 12px;">
+            <span class="travel-date">{% if travel.date_label %}{{ travel.date_label }}{% else %}{{ travel.date | date: "%b %Y" }}{% endif %}</span>
             <span class="travel-location">{{ travel.location }}</span>
           </p>
         </div>

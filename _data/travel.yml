@@ -1,7 +1,5 @@
 list:
-  - date: 2026-05-01
-    detail: "Conference or talk"
-    location: "City"
-  - date: 2026-06-01
-    detail: "Research visit"
-    location: "Institution"
+  - date_label: "Now"
+    location: "Seattle"
+  - date_label: "Dec 2026"
+    location: "Sydney"
