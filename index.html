@@ -34,11 +34,6 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       </a>
     </div>
     <div class="home-contact-row home-profile-links">
-      {% if site.links.github and site.links.github != "" %}
-      <a href="{{ site.links.github }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
-        <img src="{{ '/assets/images/icons/github.svg' | relative_url }}" class="home-contact-icon" alt="">GitHub
-      </a>
-      {% endif %}
       {% if site.links.google_scholar and site.links.google_scholar != "" %}
       <a href="{{ site.links.google_scholar }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
         <img src="{{ '/assets/images/icons/google-scholar.svg' | relative_url }}" class="home-contact-icon" alt="">Google Scholar
@@ -52,6 +47,11 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       {% if site.links.x and site.links.x != "" %}
       <a href="{{ site.links.x }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
         <img src="{{ '/assets/images/icons/x.svg' | relative_url }}" class="home-contact-icon" alt="">X
+      </a>
+      {% endif %}
+      {% if site.links.github and site.links.github != "" %}
+      <a href="{{ site.links.github }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/github.svg' | relative_url }}" class="home-contact-icon" alt="">GitHub
       </a>
       {% endif %}
       {% if site.links.instagram and site.links.instagram != "" %}
