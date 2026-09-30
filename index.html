@@ -24,14 +24,43 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       </div>
     </div>
   </div>
-  <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1">
-    <a href="mailto:{{ site.author.email }}" class="inline-flex items-center font-light mt-2">
-      <i data-lucide="mail" class="mr-2 h-[1.2em] w-[1.2em]"></i>{{ site.author.email }}
-    </a>
-    <a href="mailto:hanluo@uw.edu" class="inline-flex items-center font-light mt-2">
-      <i data-lucide="mail" class="mr-2 h-[1.2em] w-[1.2em]"></i>hanluo@uw.edu
-    </a>
-  </p>
+  <nav class="home-contact" aria-label="Contact and profiles">
+    <div class="home-contact-row">
+      <a href="mailto:{{ site.author.email }}" class="home-contact-link">
+        <i data-lucide="mail" class="home-contact-icon" aria-hidden="true"></i>{{ site.author.email }}
+      </a>
+      <a href="mailto:hanluo@uw.edu" class="home-contact-link">
+        <i data-lucide="mail" class="home-contact-icon" aria-hidden="true"></i>hanluo@uw.edu
+      </a>
+    </div>
+    <div class="home-contact-row home-profile-links">
+      {% if site.links.github and site.links.github != "" %}
+      <a href="{{ site.links.github }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/github.svg' | relative_url }}" class="home-contact-icon" alt="">GitHub
+      </a>
+      {% endif %}
+      {% if site.links.google_scholar and site.links.google_scholar != "" %}
+      <a href="{{ site.links.google_scholar }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/google-scholar.svg' | relative_url }}" class="home-contact-icon" alt="">Google Scholar
+      </a>
+      {% endif %}
+      {% if site.links.linkedin and site.links.linkedin != "" %}
+      <a href="{{ site.links.linkedin }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/linkedin.svg' | relative_url }}" class="home-contact-icon" alt="">LinkedIn
+      </a>
+      {% endif %}
+      {% if site.links.instagram and site.links.instagram != "" %}
+      <a href="{{ site.links.instagram }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/instagram.svg' | relative_url }}" class="home-contact-icon" alt="">Instagram
+      </a>
+      {% endif %}
+      {% if site.links.x and site.links.x != "" %}
+      <a href="{{ site.links.x }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="external-link" class="home-contact-icon" aria-hidden="true"></i>X
+      </a>
+      {% endif %}
+    </div>
+  </nav>
   <div class="mt-5" style="padding: 14px 18px; border-left: 3px solid rgb(var(--ink-warm) / 0.55); border-radius: 10px; background: rgb(var(--surface-alt) / 0.7);">
     <p class="home-bio"><span style="font-weight: 500;">Open to collaborations:</span> I am always interested in potential research collaborations. Please feel free to reach out via email!</p>
   </div>

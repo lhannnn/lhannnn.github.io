@@ -1,7 +1,7 @@
 <footer class="mt-6">
   <div class="footer-container px-3">
     <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
-      <div class="md:col-span-5">
+      <div class="{% if page.url == '/' %}md:col-span-12{% else %}md:col-span-5{% endif %}">
         <p class="footer-text !mb-1">&copy; {{ "now" | date: "%Y" }} {{ site.author.name }}</p>
         <p class="footer-text inline-flex items-center !mb-0.5">
           <a href="https://github.com/donghoon-io/donghoon-io.github.io" target="_blank" rel="noopener noreferrer" style="font-weight: 300">
@@ -9,6 +9,7 @@
           </a>
         </p>
       </div>
+      {% unless page.url == '/' %}
       <div class="md:col-span-7">
         <p>
           <a class="footer-text footer-link" href="mailto:{{ site.author.email }}"><i data-lucide="mail" class="mr-2 h-[.95em] w-[.95em]"></i>Email</a><br>
@@ -19,6 +20,7 @@
           <a class="footer-text footer-link" target="_blank" rel="noopener noreferrer" href="{{ site.links.x }}"><i data-lucide="external-link" class="mr-2 h-[.95em] w-[.95em]"></i>X</a>{% endif %}
         </p>
       </div>
+      {% endunless %}
     </div>
   </div>
 </footer>
