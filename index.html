@@ -49,14 +49,14 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
         <img src="{{ '/assets/images/icons/linkedin.svg' | relative_url }}" class="home-contact-icon" alt="">LinkedIn
       </a>
       {% endif %}
+      {% if site.links.x and site.links.x != "" %}
+      <a href="{{ site.links.x }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/icons/x.svg' | relative_url }}" class="home-contact-icon" alt="">X
+      </a>
+      {% endif %}
       {% if site.links.instagram and site.links.instagram != "" %}
       <a href="{{ site.links.instagram }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
         <img src="{{ '/assets/images/icons/instagram.svg' | relative_url }}" class="home-contact-icon" alt="">Instagram
-      </a>
-      {% endif %}
-      {% if site.links.x and site.links.x != "" %}
-      <a href="{{ site.links.x }}" class="home-contact-link" target="_blank" rel="noopener noreferrer">
-        <i data-lucide="external-link" class="home-contact-icon" aria-hidden="true"></i>X
       </a>
       {% endif %}
     </div>
