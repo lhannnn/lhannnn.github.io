@@ -67,6 +67,9 @@ layout: default
   <div>
     <p class="section-title">Materials</p>
     <div class="publication-detail-metadata">
+      {% if page.project_url %}
+      <a href="{{ page.project_url }}" target="_blank" rel="noopener noreferrer"><i data-lucide="external-link" class="mr-1"></i>Project</a>
+      {% endif %}
       {% unless page.pdf == false %}
       <a href="{% if page.pdf %}{{ page.pdf }}{% else %}{{ page.slug | prepend: '/assets/pdf/' | append: '.pdf' | relative_url }}{% endif %}" rel="external"><i data-lucide="file" class="mr-1"></i>{% if page.venue contains "arXiv" or page.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
       {% endunless %}

@@ -1,4 +1,7 @@
 list:
+  - date: 2026-10-05
+    title: "HERA preprint released"
+    description: 'Our paper, <a href="https://arxiv.org/abs/2610.06563">HERA: Harness-Environment Co-Evolution for Reliable Agentic Abstention</a>, is now available on arXiv.'
   - date: 2026-09-26
     title: "Agentic Abstention accepted to NeurIPS 2026"
     description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, has been accepted to NeurIPS 2026."

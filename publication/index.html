@@ -84,7 +84,7 @@ description: Publication list of Han Luo
           <p class="mb-2 inline-flex items-center font-light"><i data-lucide="trophy" class="mr-1.5"></i>{{ paper.award }}</p>
           {% endif %}
           <p class="publication-metadata">
-            <a href="{{ '/publication/' | append: paper.slug | append: '/' | relative_url }}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
+            <a href="{% if paper.project_url %}{{ paper.project_url }}{% else %}{{ '/publication/' | append: paper.slug | append: '/' | relative_url }}{% endif %}"><i data-lucide="external-link" class="mr-1"></i>Project</a>
             {% unless paper.pdf == false %}
             <a href="{% if paper.pdf %}{{ paper.pdf }}{% else %}{{ '/assets/pdf/' | append: paper.slug | append: '.pdf' | relative_url }}{% endif %}"><i data-lucide="file" class="mr-1"></i>{% if paper.venue contains "arXiv" or paper.note contains "to appear" %}Preprint{% else %}PDF{% endif %}</a>
             {% endunless %}

@@ -1,4 +1,21 @@
 project:
+  - title: "HERA"
+    description: "Harness-environment co-evolution for reliable agentic abstention."
+    tags:
+      - arXiv 2026
+      - LLM Agents
+      - Abstention
+      - Harness Evolution
+    image: hera-method.svg
+    paper: https://arxiv.org/pdf/2610.06563
+    arxiv: https://arxiv.org/abs/2610.06563
+    publication: /publication/hera/
+    code: https://github.com/lhannnn/HERA-Bench
+    link: https://hera-bench.github.io/
+    detail: |
+      <p>HERA jointly evolves agent harnesses and executable environments to improve decisions about when to act and when to abstain. Verified pairs of feasible and infeasible tasks expose agent failures, which guide both harness adaptation and the construction of new tasks.</p>
+      <img class="modal-image-responsive project-modal-wide" src="/assets/images/project/hera-method.svg" alt="HERA harness-environment co-evolution framework">
+      <p class="project-modal-caption">HERA alternates failure diagnosis, environment evolution, and harness adaptation.</p>
   - title: "Agentic Abstention"
     description: "Do LLM agents know when to stop instead of act?"
     tags:

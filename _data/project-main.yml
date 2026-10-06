@@ -1,4 +1,9 @@
 project:
+  - title: "HERA"
+    slug: "hera"
+    image: "../project/hera-method.svg"
+    venue: "arXiv 2026"
+    description: "Co-evolving agent harnesses and environments for reliable agentic abstention."
   - title: "Agentic Abstention"
     slug: "agentic-abstention"
     image: "agentic-abstention-teaser.png"
