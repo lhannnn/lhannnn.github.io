@@ -14,7 +14,7 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       <div class="lg:col-span-9 lg:self-center 2xl:col-span-9">
         <h1 class="home-title">{{ site.author.name }}</h1>
         <div class="mx-2 my-6 flex items-center justify-center lg:hidden">
-          <img src="{{ '/assets/images/profile.jpg' | relative_url }}?v=original-aa7bf4d3" alt="Han Luo portrait" style="width: 60%; max-width: 300px;"/>
+          <img src="{{ '/assets/images/profile.jpg' | relative_url }}?v=original-aa7bf4d3" alt="Han Luo portrait" class="home-portrait-mobile"/>
         </div>
         <p class="home-bio mt-3">I am a third-year undergraduate student in Computer Science at the University of Leeds, UK, and Southwest Jiaotong University, China. My research focuses on LLM agents.</p>
         <p class="home-bio mt-3">I am fortunate to work with <a href="https://llwang.net/">Prof. Lucy Lu Wang</a> in the <a href="https://larchlab.org/">LARCH Lab</a> at the University of Washington. Previously, I worked with <a href="https://www.guylaban.com/">Prof. Guy Laban</a> in <a href="https://labalab.li/">LabaLab</a> at Ben-Gurion University of the Negev and at the University of Cambridge.</p>
@@ -61,15 +61,15 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       {% endif %}
     </div>
   </nav>
-  <div class="mt-5" style="padding: 14px 18px; border-left: 3px solid rgb(var(--ink-warm) / 0.55); border-radius: 10px; background: rgb(var(--surface-alt) / 0.7);">
-    <p class="home-bio"><span style="font-weight: 500;">Open to collaborations:</span> I am always interested in potential research collaborations. Please feel free to reach out via email!</p>
+  <div class="home-collaboration mt-5">
+    <p class="home-bio"><span>Open to collaborations:</span> I am always interested in potential research collaborations. Please feel free to reach out via email!</p>
   </div>
 </div>
 
 <div class="mt-10 px-3 md:mt-12">
-  <div class="mb-4 flex items-center justify-between gap-4 border-b pb-[5px]" style="border-color: rgb(var(--ink) / 0.3);">
+  <div class="home-publications-heading mb-4 flex items-center justify-between gap-4 border-b pb-[9px]">
     <p class="section-title !mb-0 !border-b-0 !pb-0">Selected publications</p>
-    <a href="{{ '/publication' | relative_url }}" class="home-view-all inline-flex items-center whitespace-nowrap" style="color: rgb(var(--ink) / 0.56) !important;">
+    <a href="{{ '/publication' | relative_url }}" class="home-view-all inline-flex items-center whitespace-nowrap">
       View all
       <span class="ml-1" style="color: inherit !important;">&gt;</span>
     </a>

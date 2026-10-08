@@ -1,5 +1,5 @@
 .news-title {
-  font-size: .95rem;
+  font-size: 1.05rem;
   font-weight: 400 !important;
   font-family: 'Newsreader' !important;
   font-optical-sizing: auto !important;
@@ -7,32 +7,34 @@
 }
 
 .news-date {
+  color: rgb(var(--muted)) !important;
   font-size: .7rem;
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   margin-bottom: 0 !important;
 }
 .news-description {
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   margin-bottom: 0 !important;
   font-size: .85rem;
 }
 
 .news-description a {
-  font-weight: 350 !important;
+  font-weight: 400 !important;
 }
 
 .news-description a:hover {
-  font-weight: 450 !important;
+  font-weight: 400 !important;
 }
 
 .travel-date {
-  font-weight: 200 !important;
+  color: rgb(var(--muted)) !important;
+  font-weight: 400 !important;
   font-size: .7rem !important;
 }
 
 .travel-detail {
   font-family: 'Newsreader' !important;
-  font-weight: 100 !important;
+  font-weight: 400 !important;
   font-size: .8rem !important;
   margin-right: .75rem !important;
   font-optical-sizing: auto !important;

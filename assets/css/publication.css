@@ -12,27 +12,27 @@
 .publication-year {
   font-weight: 400;
   font-size: 1.5rem;
-  opacity: .3;
-  font-family: 'Newspaper';
+  color: rgb(var(--muted)) !important;
+  font-family: 'Newsreader';
   margin: 1.75rem 0 0.9rem 0 !important;
 }
 
 .publication-year-link {
-  color: rgb(var(--ink) / 0.5);
-  font-weight: 300;
+  color: rgb(var(--muted)) !important;
+  font-weight: 400;
   font-size: .8rem !important;
   display: inline-block;
   transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
 .publication-year-link:hover {
-  color: rgb(var(--ink));
+  color: rgb(var(--accent)) !important;
   text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
 
 .publication-year-link.is-active {
-  color: rgb(var(--ink));
+  color: rgb(var(--accent)) !important;
   font-weight: 500;
 }
 
@@ -42,7 +42,7 @@
 }
 .publication-list > label {
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .publication-filter-row {
@@ -60,7 +60,7 @@
   margin-top: 1.15rem;
   margin-bottom: -1rem;
   font-size: 0.74rem;
-  font-weight: 250;
+  font-weight: 400;
   color: rgb(30 30 30 / 0.7);
 }
 
@@ -96,9 +96,10 @@
 .publication-item {
   position: relative;
   padding-bottom: 0.8rem;
-  background-color: rgb(var(--surface-alt));
-  padding: .8rem 1rem;
-  border: 1px solid rgb(var(--accent) / 0.1) !important;
+  background-color: rgb(var(--surface));
+  padding: 1.15rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--separator-color);
   margin-top: 1rem;
 }
 
@@ -108,8 +109,9 @@
 
 .publication-title {
   font-weight: 400 !important;
-  font-size: 1rem !important;
-  line-height: 1.1 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.45 !important;
+  color: rgb(var(--ink)) !important;
   font-family: 'Newsreader';
 }
 
@@ -145,9 +147,10 @@
 }
 
 .publication-author-list {
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   font-size: .8rem !important;
   margin-bottom: 0.3rem !important;
+  color: rgb(var(--muted)) !important;
 }
 
 .publication-author-list > a {
@@ -155,11 +158,11 @@
 }
 
 .publication-author-list > a:hover {
-  font-weight: 450 !important;
+  font-weight: 400 !important;
 }
 
 .publication-coauthor {
-  font-weight: 200 !important
+  font-weight: 400 !important
 }
 
 .publication-cofirst {
@@ -167,30 +170,31 @@
 }
 
 .publication-note {
-  font-weight: 200;
+  font-weight: 400;
   font-size: .75rem
 }
 
 .publication-venue {
   font-weight: 400 !important;
   font-size: .7rem !important;
-  color: rgb(var(--ink) / 0.72) !important;
+  color: rgb(var(--accent)) !important;
   letter-spacing: 0.05em;
 }
 .publication-metadata {
   font-size: .75rem;
   margin-top: 0.2rem !important;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .publication-metadata > a {
-  color: rgb(72 57 33) !important;
-  font-weight: 350 !important;
+  color: rgb(var(--accent)) !important;
+  font-weight: 400 !important;
   display: inline-flex;
   align-items: center;
 }
 .publication-metadata > a:hover {
-  font-weight: 500 !important;
+  text-decoration: underline !important;
 }
 
 .publication-item > p:has(.publication-venue) {
@@ -210,8 +214,8 @@
 .publication-detail-metadata > label {
   margin-right: 0 !important;
   font-size: .9rem;
-  color: rgb(72 57 33) !important;
-  font-weight: 350 !important;
+  color: rgb(var(--accent)) !important;
+  font-weight: 400 !important;
   display: inline-flex;
   align-items: center;
   line-height: 1.2;
@@ -219,7 +223,7 @@
 
 .publication-detail-metadata a:hover,
 .publication-detail-metadata label:hover {
-  font-weight: 500 !important;
+  text-decoration: underline !important;
   transition: all 0.2s ease;
 }
 
@@ -252,12 +256,13 @@
 }
 
 .publication-detail-affiliation-name {
-  font-weight: 200;
+  font-weight: 400;
   font-size: .85rem !important;
   line-height: 1.4 !important;
   text-align: center;
   overflow-wrap: anywhere;
   word-break: break-word;
+  color: rgb(var(--muted)) !important;
 }
 
 .publication-detail-image {
@@ -301,13 +306,14 @@
 }
 .publication-detail-cofirst {
   font-size: .8rem;
-  font-weight: 200;
+  font-weight: 400;
   text-align: right;
 }
 
 .publication-detail-title {
   font-weight: 400 !important;
-  font-size: 1.1rem !important;
+  font-size: 1.65rem !important;
+  line-height: 1.35;
   font-family: 'Newsreader';
 }
 
@@ -393,7 +399,10 @@
 .bibtex {
   padding: .5rem;
   margin: 0 !important;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color);
+  background: rgb(var(--surface-alt));
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 #bibtex-block {
   margin-top: 1rem;
@@ -410,14 +419,14 @@
   font-size: 0.75rem;
   padding: 2px 4px;
   margin-bottom: 4px;
-  background: white;
-  color: black;
-  border: 1px solid black;
+  background: rgb(var(--surface));
+  color: rgb(var(--accent));
+  border: 1px solid var(--border-color);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .copy-button:hover {
-  background: black;
-  color: white;
+  background: rgb(var(--accent));
+  color: rgb(var(--white));
 }
