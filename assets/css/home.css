@@ -264,8 +264,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-secondary-color) !important;
-  color: rgb(var(--accent)) !important;
+  background-color: var(--venue-label-background) !important;
+  color: var(--venue-label-ink) !important;
   font-weight: 400;
   font-size: 0.65rem;
   padding: 1px 4px .5px 4px;

@@ -62,7 +62,7 @@ description: Publication list of Han Luo
         {% assign pub_items_sorted = pub.items | sort: "month" | reverse %}
         {% for paper in pub_items_sorted %}
         <div class="publication-item w-full {% for cat_each in paper.category %}publication-tag-{{ cat_each | replace: ' / ', '' | replace: ' ', '-' }} {% endfor %}">
-          <p class="pb-.5"><span class="publication-venue">{{ paper.venue }}</span>{% if paper.note %} <span class="publication-note">({{ paper.note }})</span>{% endif %}</p>
+          <p class="pb-.5"><span class="publication-venue venue-label{% if paper.publication_type == 'preprint' or paper.venue contains 'arXiv' %} venue-label--preprint{% endif %}">{{ paper.venue }}</span>{% if paper.note %} <span class="publication-note">({{ paper.note }})</span>{% endif %}</p>
           <p class="pb-1 publication-title-row">
             <a class="publication-title" href="{{ '/publication/' | append: paper.slug | append: '/' | relative_url }}">{{ paper.title }}</a>
           </p>

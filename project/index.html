@@ -23,7 +23,7 @@ description: Projects of Han Luo
                     <div class="project-item-tags">
                       <p>
                         {% for tag in proj.tags %}
-                        <a title="" href="">{{ tag }}</a>
+                        <a title="" href=""{% if tag contains 'arXiv' %} class="venue-label venue-label--preprint"{% elsif forloop.first %} class="venue-label"{% endif %}>{{ tag }}</a>
                         {% endfor %}
                       </p>
                     </div>

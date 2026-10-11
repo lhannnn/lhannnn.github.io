@@ -88,7 +88,7 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
               <div class="home-project-title-row">
                 <p class="home-project-title">{{ project.title }}</p>
               </div>
-              {% if project.venue %}<span class="home-project-venue">{{ project.venue }}</span>{% endif %}
+              {% if project.venue %}<span class="home-project-venue venue-label{% if project_pub.publication_type == 'preprint' or project.venue contains 'arXiv' %} venue-label--preprint{% endif %}">{{ project.venue }}</span>{% endif %}
             </div>
             {% if project.description %}<p class="home-project-description">{{ project.description }}</p>{% endif %}
             {% if project_pub %}

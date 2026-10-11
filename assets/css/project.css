@@ -90,8 +90,8 @@
   padding: 0 5px;    /* UPDATED: Added a little vertical padding for better pill height */
   
   border-radius: .2rem;
-  color: var(--element-secondary-color) !important;
-  background-color: var(--background-secondary-color) !important;
+  color: var(--venue-label-ink, var(--element-secondary-color)) !important;
+  background-color: var(--venue-label-background, var(--background-secondary-color)) !important;
   border: 0 !important;
   font-size: .7rem;
   text-decoration: none;

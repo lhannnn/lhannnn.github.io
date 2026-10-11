@@ -175,9 +175,13 @@
 }
 
 .publication-venue {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 2px;
   font-weight: 400 !important;
   font-size: .7rem !important;
-  color: rgb(var(--accent)) !important;
+  color: var(--venue-label-ink) !important;
+  background-color: var(--venue-label-background);
   letter-spacing: 0.05em;
 }
 .publication-metadata {

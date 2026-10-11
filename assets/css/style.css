@@ -99,6 +99,16 @@ span {
   color: inherit;
 }
 
+.venue-label {
+  --venue-label-ink: #a34c2e;
+  --venue-label-background: #fff3ec;
+}
+
+.venue-label--preprint {
+  --venue-label-ink: #636b66;
+  --venue-label-background: #f3f4f3;
+}
+
 :focus-visible {
   outline: 2px solid rgb(var(--accent));
   outline-offset: 4px;
