@@ -117,8 +117,8 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
 </div>
 
 <div class="mb-20 mt-10 px-3 md:mt-14">
-  <div class="grid grid-cols-1 items-stretch gap-y-4 gap-x-8 sm:grid-cols-12">
-    <div class="flex flex-col sm:col-span-8">
+  <div class="home-updates-grid">
+    <div class="flex flex-col">
       <div class="flex flex-1 flex-col">
         <h2 class="section-title" id="news-heading">News</h2>
         <ul class="news-list" aria-labelledby="news-heading">
@@ -132,8 +132,8 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
       </div>
     </div>
 
-    <div class="mt-6 flex flex-col sm:col-span-4 sm:mt-0">
-      <div class="flex flex-1 flex-col">
+    <div class="home-updates-sidebar">
+      <div class="flex flex-col">
         <p class="section-title">Where to find me</p>
         {% for travel in travels limit: 10 %}
         <div class="mb-2">
@@ -144,6 +144,27 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
         </div>
         {% endfor %}
       </div>
+      <section class="home-service" aria-labelledby="academic-service">
+        <h2 class="section-title" id="academic-service">Academic Service</h2>
+        <dl class="home-service-list">
+          <div class="home-service-item">
+            <dt>ICLR 2027</dt>
+            <dd>Reviewer</dd>
+          </div>
+          <div class="home-service-item">
+            <dt>NeurIPS 2026</dt>
+            <dd>Reviewer</dd>
+          </div>
+          <div class="home-service-item">
+            <dt>CUI 2026</dt>
+            <dd>Reviewer</dd>
+          </div>
+          <div class="home-service-item">
+            <dt>WWW 2026</dt>
+            <dd>Reviewer</dd>
+          </div>
+        </dl>
+      </section>
     </div>
   </div>
 </div>
