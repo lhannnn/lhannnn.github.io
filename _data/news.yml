@@ -1,22 +1,32 @@
 list:
   - date: 2026-10-05
     title: "HERA preprint released"
-    description: 'Our paper, <a href="https://arxiv.org/abs/2610.06563">HERA: Harness-Environment Co-Evolution for Reliable Agentic Abstention</a>, is now available on arXiv.'
+    description: 'Our <a href="https://arxiv.org/abs/2610.06563">HERA</a> preprint on harness–environment co-evolution is now available on arXiv.'
   - date: 2026-09-26
     title: "Agentic Abstention accepted to NeurIPS 2026"
-    description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, has been accepted to NeurIPS 2026."
+    description: '<a href="/publication/agentic-abstention/">Agentic Abstention</a> has been accepted to NeurIPS 2026.'
   - date: 2026-06-27
+    featured: false
     title: "Agentic Abstention preprint released"
     description: "Our paper, Agentic Abstention: Do Agents Know When to Stop Instead of Act?, is now available as arXiv:2606.28733."
   - date: 2026-05-11
+    featured: false
     title: "SAGE arXiv preprint released"
     description: "Our ICML 2026 paper, Plan in Sandbox, Navigate in Open Worlds, is now available as arXiv:2605.10118."
   - date: 2026-05-01
     title: "Paper accepted to ICML 2026"
-    description: "Our collaborative paper, Plan in Sandbox, Navigate in Open Worlds, was accepted to ICML 2026."
+    description: '<a href="/publication/plan-in-sandbox-navigate/">Plan in Sandbox, Navigate in Open Worlds</a> has been accepted to ICML 2026.'
   - date: 2026-04-27
-    title: "Two papers accepted to ACL 2026"
-    description: "SPASM was accepted to Findings of ACL 2026, and DialogGuard was accepted to ACL 2026 System Demonstrations."
+    title: "SPASM accepted to Findings of ACL 2026"
+    description: '<a href="/publication/spasm/">SPASM</a> has been accepted to Findings of ACL 2026.'
+  - date: 2026-04-27
+    title: "DialogGuard accepted to ACL 2026 System Demonstrations"
+    description: '<a href="/publication/dialogguard/">DialogGuard</a> has been accepted to ACL 2026 System Demonstrations.'
   - date: 2026-04-10
+    featured: false
     title: "SPASM preprint released"
     description: "The SPASM preprint is available with code at github.com/lhannnn/SPASM."
+  - date: "2025-08"
+    date_label: "Aug 2025"
+    title: "Cambridge OSRP Best Research Project nomination"
+    description: 'My Cambridge OSRP project received a Best Research Project nomination.'

@@ -5,7 +5,7 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
 ---
 
 {% assign projects = site.data.project-main.project %}
-{% assign news = site.data.news.list %}
+{% assign news = site.data.news.list | where_exp: "item", "item.featured != false" %}
 {% assign travels = site.data.travel.list %}
 
 <div class="px-3 pb-4 pt-3">
@@ -120,14 +120,15 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
   <div class="grid grid-cols-1 items-stretch gap-y-4 gap-x-8 sm:grid-cols-12">
     <div class="flex flex-col sm:col-span-8">
       <div class="flex flex-1 flex-col">
-        <p class="section-title">News</p>
-        {% for item in news limit: 4 %}
-        <div class="mb-6">
-          <p class="news-date pb-1">{{ item.date | date: "%b %-d, %Y" }}</p>
-          <p class="news-title">{{ item.title }}</p>
-          <p class="news-description">{{ item.description }}</p>
-        </div>
-        {% endfor %}
+        <h2 class="section-title" id="news-heading">News</h2>
+        <ul class="news-list" aria-labelledby="news-heading">
+          {% for item in news %}
+          <li class="news-item">
+            <time class="news-date" datetime="{{ item.date }}">{% if item.date_label %}{{ item.date_label }}{% else %}{{ item.date | date: "%b %Y" }}{% endif %}</time>
+            <p class="news-description">{{ item.description }}</p>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
 
