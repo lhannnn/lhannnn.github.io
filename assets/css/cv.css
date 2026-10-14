@@ -13,6 +13,11 @@
 .cv p { margin-bottom: 0.5rem; }
 .cv section { margin-bottom: 3rem; }
 
+.cv-service {
+  margin-left: 6rem;
+  max-width: 20rem;
+}
+
 .cv a { font-weight: 400; color: rgb(var(--accent)) !important;}
 .cv b a { font-weight: 400;}
 
