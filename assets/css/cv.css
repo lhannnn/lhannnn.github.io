@@ -25,9 +25,23 @@
 .cv header h1 { font-family: 'Newsreader'; font-size: 2rem; font-weight: 400 !important; }
 .cv header p { margin: .5rem 0; font-size: .9rem !important}
 
-.cv-pdf { font-size: .9rem !important; font-weight: 400 !important; margin-left: 1.5rem; white-space: nowrap;}
-.cv-pdf:hover { font-weight: 500 !important;}
-.cv-pdf i { margin-right: .1rem;}
+.cv-heading { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem 1.25rem; }
+.cv-heading h1 { margin: 0; }
+.cv-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .7rem;
+  border: 1px solid rgb(var(--accent) / .35);
+  border-radius: .3rem;
+  font-size: .85rem !important;
+  font-weight: 400 !important;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.cv-pdf:hover { background: rgb(var(--accent) / .08); }
+.cv-pdf svg { flex-shrink: 0; }
 
 .cv-coauthor {
   font-weight: 400 !important;

@@ -11,8 +11,14 @@ description: Curriculum vitae of Han Luo
   <div>
     <div>
       <header>
-        <div class="inline-flex items-center">
+        <div class="cv-heading">
           <h1>{{ site.author.name }}</h1>
+          <a class="cv-pdf" href="{{ '/assets/pdf/Han_Luo_CV.pdf' | relative_url }}" download="Han_Luo_CV.pdf" type="application/pdf" aria-label="Download Han Luo's CV as a PDF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4" />
+            </svg>
+            Download PDF
+          </a>
         </div>
         <p>
           <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br>
