@@ -12,6 +12,18 @@
   line-height: 1.8;
 }
 
+.home-institution {
+  white-space: nowrap;
+}
+
+.home-institution-logo {
+  display: inline-block;
+  width: 1.5rem;
+  height: auto;
+  margin-inline-end: .15em;
+  vertical-align: -.08em;
+}
+
 .home-bio a {
   font-weight: inherit;
   color: rgb(var(--accent)) !important;
