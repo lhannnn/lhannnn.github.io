@@ -5,6 +5,10 @@ list:
   - date: 2026-09-26
     title: "Agentic Abstention accepted to NeurIPS 2026"
     description: '<a href="/publication/agentic-abstention/">Agentic Abstention</a> has been accepted to NeurIPS 2026. See ya in Sydney 🇦🇺!'
+  - date: "2026"
+    date_label: "Summer 2026"
+    title: "Two-month research visit to Seattle"
+    description: 'I spent two months at <a href="https://larchlab.org/">LARCH Lab</a>, University of Washington, in Seattle 🇺🇸, working with <a href="https://llwang.net/">Prof. Lucy Lu Wang</a>.'
   - date: 2026-06-27
     featured: false
     title: "Agentic Abstention preprint released"
@@ -26,6 +30,10 @@ list:
     featured: false
     title: "SPASM preprint released"
     description: "The SPASM preprint is available with code at github.com/lhannnn/SPASM."
+  - date: "2026"
+    date_label: "Winter 2026"
+    title: "Two-month research visit to Israel"
+    description: 'I spent two months at <a href="https://labalab.li/">LabaLab</a>, Ben-Gurion University of the Negev, in Israel 🇮🇱, working with <a href="https://www.guylaban.com/">Prof. Guy Laban</a>.'
   - date: "2025-08"
     date_label: "Aug 2025"
     title: "Cambridge OSRP Best Research Project nomination"
