@@ -136,6 +136,14 @@
   border-bottom: 1px solid var(--separator-color);
 }
 
+.home-research-intro {
+  margin: 0 0 .6rem !important;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(var(--muted));
+}
+
 .home-research-group {
   border-top: 1px solid var(--separator-color);
 }
