@@ -59,7 +59,7 @@ description: Curriculum vitae of Han Luo
         <div class="cv-oneline-entries">
           <div class="cv-dated-entry">
             <div class="cv-dated-date"></div>
-            <div class="cv-dated-content">Large language model agents; multi-agent systems; responsible AI; language model behavior in complex, interactive environments.</div>
+            <div class="cv-dated-content">Reliable agents; recursive self-improvement (RSI).</div>
           </div>
         </div>
       </section>
@@ -74,8 +74,9 @@ description: Curriculum vitae of Han Luo
           <div class="cv-dated-content">
             <a class="cv-publication-title" href="{{ '/publication/' | append: pub.slug | relative_url }}">{{ pub.title }}</a><br>
             {% for author in pub.authors %}
-            {% if author == site.author.name %}<a class="cv-author" href="{{ site.author.url }}">{{ author }}</a>{% else %}<span>{{ author }}</span>{% endif %}{% unless forloop.last %}, {% endunless %}
+            {% if author == site.author.name %}<a class="cv-author" href="{{ site.author.url }}">{{ author }}</a>{% else %}<span>{{ author }}</span>{% endif %}{% if pub.coauthors contains author %}*{% endif %}{% unless forloop.last %}, {% endunless %}
             {% endfor %}
+            {% if pub.coauthors.size > 0 %}<span class="cv-note">(* Equal contribution)</span>{% endif %}
             <br>
             {{ pub.venue }}.{% if pub.note %} <span class="cv-note">({{ pub.note }})</span>{% endif %}
           </div>

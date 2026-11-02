@@ -78,7 +78,7 @@ description: Publication list of Han Luo
             {% endif %}
             {% unless forloop.last %}, {% endunless %}
             {% endfor %}
-            {% if paper.coauthors %} <span class="publication-cofirst ml-2">(* co-first authorship)</span>{% endif %}
+            {% if paper.coauthors %} <span class="publication-cofirst ml-2">(* Equal contribution)</span>{% endif %}
           </p>
           {% if paper.award %}
           <p class="mb-2 inline-flex items-center font-light"><i data-lucide="trophy" class="mr-1.5"></i>{{ paper.award }}</p>
