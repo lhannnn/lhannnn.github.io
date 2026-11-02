@@ -4,7 +4,7 @@ list:
     description: 'Our <a href="https://arxiv.org/abs/2610.06563">HERA</a> preprint on harness–environment co-evolution is now available on arXiv.'
   - date: 2026-09-26
     title: "Agentic Abstention accepted to NeurIPS 2026"
-    description: '<a href="/publication/agentic-abstention/">Agentic Abstention</a> has been accepted to NeurIPS 2026.'
+    description: '<a href="/publication/agentic-abstention/">Agentic Abstention</a> has been accepted to NeurIPS 2026. See ya in Sydney 🇦🇺!'
   - date: 2026-06-27
     featured: false
     title: "Agentic Abstention preprint released"
@@ -18,10 +18,10 @@ list:
     description: '<a href="/publication/plan-in-sandbox-navigate/">Plan in Sandbox, Navigate in Open Worlds</a> has been accepted to ICML 2026.'
   - date: 2026-04-27
     title: "SPASM accepted to Findings of ACL 2026"
-    description: '<a href="/publication/spasm/">SPASM</a> has been accepted to Findings of ACL 2026.'
+    description: '<a href="/publication/spasm/">SPASM</a> has been accepted to Findings of ACL 2026. See ya in San Diego 🇺🇸!'
   - date: 2026-04-27
     title: "DialogGuard accepted to ACL 2026 System Demonstrations"
-    description: '<a href="/publication/dialogguard/">DialogGuard</a> has been accepted to ACL 2026 System Demonstrations.'
+    description: '<a href="/publication/dialogguard/">DialogGuard</a> has been accepted to ACL 2026 System Demonstrations. See ya in San Diego 🇺🇸!'
   - date: 2026-04-10
     featured: false
     title: "SPASM preprint released"
