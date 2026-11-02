@@ -24,6 +24,16 @@
   vertical-align: -.08em;
 }
 
+.home-institution-logo--bgu {
+  width: 1.125rem;
+  vertical-align: -.15em;
+}
+
+.home-institution-logo--cambridge {
+  width: 1rem;
+  vertical-align: -.18em;
+}
+
 .home-bio a {
   font-weight: inherit;
   color: rgb(var(--accent)) !important;
