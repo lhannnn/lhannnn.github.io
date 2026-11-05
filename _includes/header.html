@@ -18,15 +18,17 @@
         <li class="nav-item">
           <a class="nav-link {% if page.url contains 'cv' %} active {% endif %}" href="{{ '/cv/' | relative_url }}">CV</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/blog/' %} active {% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+        </li>
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle {% if page.url contains 'basketball' or page.url contains 'piano' or page.url contains 'travel' or page.url contains 'blog' %} active {% endif %}" type="button" data-dropdown-toggle aria-expanded="false">
+          <button class="nav-link dropdown-toggle {% if page.url contains 'basketball' or page.url contains 'piano' or page.url contains 'travel' %} active {% endif %}" type="button" data-dropdown-toggle aria-expanded="false">
             others
           </button>
           <ul class="dropdown-menu" aria-label="Others">
             <li><a class="dropdown-link" href="{{ '/basketball/' | relative_url }}">basketball</a></li>
             <li><a class="dropdown-link" href="{{ '/piano/' | relative_url }}">piano</a></li>
             <li><a class="dropdown-link" href="{{ '/travel/' | relative_url }}">travel</a></li>
-            <li><a class="dropdown-link" href="{{ '/blog/' | relative_url }}">blog</a></li>
           </ul>
         </li>
       </ul>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="research-document" lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% capture shared_head %}{% include head.html %}{% endcapture %}
+  {% capture research_head_end %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..700;1,300..700&amp;display=swap">
+    <link rel="stylesheet" href="{{ '/assets/css/research-blog.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+  </head>
+  {% endcapture %}
+  {{ shared_head | replace: '</head>', research_head_end }}
+  <body class="research-site">
+    <a class="research-skip" href="#research-content">Skip to content</a>
+    {% include header.html %}
+    <main class="research-main" id="research-content" aria-label="Content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
