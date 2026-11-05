@@ -357,6 +357,30 @@
   min-width: 0;
 }
 
+.home-project-authors {
+  margin: 0 !important;
+  font-size: .72rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(var(--muted)) !important;
+}
+
+.home-project-author {
+  white-space: nowrap;
+}
+
+.home-project-author--self {
+  color: rgb(var(--ink));
+  font-weight: 500;
+}
+
+.home-project-cofirst {
+  margin: .15rem 0 0 !important;
+  font-size: .65rem;
+  line-height: 1.5;
+  color: rgb(var(--muted)) !important;
+}
+
 .home-project-description {
   margin-bottom: 5px !important;
   font-size: 0.78rem;

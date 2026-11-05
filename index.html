@@ -105,6 +105,17 @@ description: Personal academic website of Han Luo, a Computer Science undergradu
               </div>
               {% if project.venue %}<span class="home-project-venue venue-label{% if project_pub.publication_type == 'preprint' or project.venue contains 'arXiv' %} venue-label--preprint{% endif %}">{{ project.venue }}</span>{% endif %}
             </div>
+            {% if project_pub.authors %}
+            <div class="home-project-authorship">
+              <p class="home-project-authors">
+                {%- for author in project_pub.authors -%}
+                  {%- unless forloop.first %}, {% endunless -%}
+                  <span class="home-project-author{% if author == site.author.name %} home-project-author--self{% endif %}">{{ author | escape }}{% if project_pub.coauthors contains author %}<sup>*</sup>{% endif %}</span>
+                {%- endfor -%}
+              </p>
+              {% if project_pub.coauthors.size > 0 %}<p class="home-project-cofirst"><sup>*</sup> Equal contribution</p>{% endif %}
+            </div>
+            {% endif %}
             {% if project.description %}<p class="home-project-description">{{ project.description }}</p>{% endif %}
             {% if project_pub %}
             <p class="home-project-metadata">
